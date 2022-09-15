@@ -1,64 +1,34 @@
+
 public class Main {
     public static void main(String[] args) {
         //Условный оператор, часть 2
         //
-        //задание 5
+        //задание 3
+
+        int year = 2031;
+        int y4;
+        int y100;
+        int y400;
+        y4 = year % 4;
 
 
-        int monthNumber = 13;
-        String season1 = "Зима";
-        String season2 = "Весна";
-        String season3 = "Лето";
-        String season4 = "Осень";
-        String season ="";
+        if (y4 == 0) {
+            y100 = year % 100;
+            y400 = year % 400;
 
-        if (monthNumber <= 12) {
-
-            switch (monthNumber) {
-                case 1:
-                    season = season1;
-
-                case 2:
-                    season = season1;
-
-                case 3:
-                    season = season2;
-
-                case 4:
-                    season = season2;
-
-                case 5:
-                    season = season2;
-
-                case 6:
-                    season = season3;
-
-                case 7:
-                    season = season3;
-
-                case 8:
-                    season = season3;
-
-                case 9:
-                    season = season4;
-
-                case 10:
-                    season = season4;
-
-                case 11:
-                    season = season4;
-
-                case 12:
-                    season = season1;
-
-                default:
-
-                    System.out.println(season);
+            if (y100 != 0) {
+                System.out.println(year + " год является высокосным");
             }
+            else if (y100 == 0 && y400 == 0) {
+                System.out.println(year + " год является высокосным");
+                }
+                else {
+                    System.out.println(year + " год неявляется высокосным");
+                }
         }
         else {
-                System.out.println("Такого месяца нет!!");
-            }
+            System.out.println(year + " год неявляется высокосным");
+        }
 
 
 
