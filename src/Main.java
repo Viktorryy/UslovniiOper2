@@ -2,25 +2,65 @@ public class Main {
     public static void main(String[] args) {
         //Условный оператор, часть 2
         //
-        //задание 4
+        //задание 5
 
 
-        int deliveryDistance = 95;
+        int monthNumber = 13;
+        String season1 = "Зима";
+        String season2 = "Весна";
+        String season3 = "Лето";
+        String season4 = "Осень";
+        String season ="";
 
-        int deliveryDay = 0;
-        int Distance1 = 20;
-        int Distance2 = 60;
-        int Distance3 = 100;
-        boolean deliveryCleint1 = deliveryDistance <= Distance1;
-        boolean deliveryCleint2 = deliveryDistance > Distance1 && deliveryDistance < Distance2;
-        boolean deliveryCleint3 = deliveryDistance >= Distance2 && deliveryDistance <= Distance3;
+        if (monthNumber <= 12) {
 
-        if (deliveryCleint1)  deliveryDay = 1;
-        if (deliveryCleint2) deliveryDay = 2;
-        if (deliveryCleint3)  deliveryDay = 3;
+            switch (monthNumber) {
+                case 1:
+                    season = season1;
 
-        System.out.println("Для доставки вашей карты " +
-                "потребуется: " + deliveryDay + " рабочих дня");
+                case 2:
+                    season = season1;
+                    ;
+                case 3:
+                    season = season2;
+
+                case 4:
+                    season = season2;
+
+                case 5:
+                    season = season2;
+
+                case 6:
+                    season = season3;
+
+                case 7:
+                    season = season3;
+
+                case 8:
+                    season = season3;
+
+                case 9:
+                    season = season4;
+
+                case 10:
+                    season = season4;
+
+                case 11:
+                    season = season4;
+
+                case 12:
+                    season = season1;
+
+                default:
+
+                    System.out.println(season);
+            }
+        }
+        else {
+                System.out.println("Такого месяца нет!!");
+            }
+
+
 
     }
 }
