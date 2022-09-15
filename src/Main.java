@@ -2,43 +2,25 @@ public class Main {
     public static void main(String[] args) {
         //Условный оператор, часть 2
         //
-        //задание 1
-
-        String imOS;
-        int clienYear;
-//каким оператором воспользоваться, чтобы получить тип операционной системы???
-
-        // возвращаемые значения
-        imOS="Android"; // считаем, что этот оператор вернул значение ))
-        clienYear = 2021;
+        //задание 4
 
 
-        byte clientOS;
-        int clientDeviceYear = 2015;
-        String im1 = "iOS";
-        String im2 = "Android";
+        int deliveryDistance = 95;
 
+        int deliveryDay = 0;
+        int Distance1 = 20;
+        int Distance2 = 60;
+        int Distance3 = 100;
+        boolean deliveryCleint1 = deliveryDistance <= Distance1;
+        boolean deliveryCleint2 = deliveryDistance > Distance1 && deliveryDistance < Distance2;
+        boolean deliveryCleint3 = deliveryDistance >= Distance2 && deliveryDistance <= Distance3;
 
-        if (imOS == im1) {
-            clientOS = 0;
-            if (clienYear >= clientDeviceYear) {
-                System.out.println("Установите версию приложения для iOS по ссылке");
-            } else {
-                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-            }
-        }
+        if (deliveryCleint1)  deliveryDay = 1;
+        if (deliveryCleint2) deliveryDay = 2;
+        if (deliveryCleint3)  deliveryDay = 3;
 
-        if (imOS == im2) {
-            clientOS = 1;
-            if (clienYear >= clientDeviceYear) {
-                System.out.println("Установите версию приложения для Android по ссылке");
-            }
-            else { System.out.println("Установите облегченную версию приложения для Android по ссылке");
-            }
-
-
-        }
-
+        System.out.println("Для доставки вашей карты " +
+                "потребуется: " + deliveryDay + " рабочих дня");
 
     }
 }
