@@ -20,7 +20,7 @@ public class Main {
 
                 case 2:
                     season = season1;
-                    ;
+
                 case 3:
                     season = season2;
 
